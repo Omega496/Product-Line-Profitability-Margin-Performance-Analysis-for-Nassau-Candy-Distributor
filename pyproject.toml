@@ -1,0 +1,23 @@
+[project]
+name = "nassau-candy-analysis"
+version = "0.1.0"
+description = "Product line profitability and margin performance analysis suite for Nassau Candy Distributor"
+readme = "README.md"
+authors = [
+    { name = "Omega496", email = "analytics@nassaucandy.com" }
+]
+requires-python = ">=3.12"
+dependencies = [
+    "numpy>=2.5.4",
+    "pandas>=3.0.6",
+    "plotly>=7.1.0",
+    "scipy>=1.18.1",
+    "streamlit>=1.66.0",
+]
+
+[project.scripts]
+nassau-candy-analysis = "src.data_loader:load_and_clean_data"
+
+[build-system]
+requires = ["uv_build>=0.12.6,<0.13.0"]
+build-backend = "uv_build"
